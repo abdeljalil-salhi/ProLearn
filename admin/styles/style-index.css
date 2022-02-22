@@ -1,0 +1,94 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+/* MAIN */
+*{
+    outline: none;
+    font-family: "Montserrat", Arial, Verdana, Geneva, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0 0;
+    padding: 0 0;
+    background-image: url('../../ressources/background_1742x1200.jpg');
+    background-size: 100vw;
+    background-repeat: repeat-y;
+    overflow: hidden;
+}
+
+.adminlogin{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 450px;
+    text-align: center;
+    display: flex;
+    color: black;
+    filter: drop-shadow(0px 5px 3px black);
+}
+
+.avatar{
+    width: 45%;
+    background: rgba(20, 20, 20, 0.8);
+    padding: 30px 0;
+    border-right: 5px solid rgba(30, 30, 30, 0.8);
+}
+
+.loginform{
+    width: 70%;
+    padding: 30px 0;
+    transition: 0.2s;
+    animation: drop 1.5s ease;
+}
+
+.input-admin{
+    margin: 15px 0;
+    font-size: 16px;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid rgba(10, 180, 180, 1);
+    outline: none;
+}
+
+.showpassword{
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+
+.submit-admin{
+    width: 85px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.submit-admin:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h2, small{
+    color: white;
+}
+
+img{
+    width: 200px;
+}
+
+
+/* KEYFRAMES */
+@keyframes drop{
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

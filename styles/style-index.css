@@ -1,0 +1,185 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+/* MAIN */
+*{
+    outline: none;
+    font-family: "Montserrat", Arial, Verdana, Geneva, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0 0;
+    padding: 0 0;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.background{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mobile{
+    display: none;
+}
+
+.logo{
+    height: 100%;
+    margin-left: 20px;
+}
+
+.name{
+    display: block;
+    text-align: center;
+    flex-grow: 2;
+    background: linear-gradient(to right, #494964, #6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 90vh;
+}
+
+.box{
+    flex: 1 1 150px;
+    margin: 5px;
+}
+
+.homecard{
+    display: block;
+    position: absolute;
+    bottom: 5vh;
+    left: 5vh;
+    animation: drop 1.5s ease;
+    filter: drop-shadow(0px 5px 3px black);
+}
+
+.boxcenter{
+    display: grid;
+    place-items: center;
+}
+
+.spaces{
+    min-width: 200px;
+    padding: 10px;
+    filter: drop-shadow(0px 5px 3px black);
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+    animation: drop 1.5s ease;
+}
+
+.space{
+    color: #444;
+    width: 100%;
+    padding: 7px 0;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 18px;
+}
+.hr{
+    border-bottom: #d7d7cd 1px solid;
+}
+
+.icon_space{
+    width: 60px;
+    flex: 0 0 60px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+    background-position: center center;
+}
+
+.text_space{
+    flex: 10 0 auto;
+}
+
+
+/* KEYFRAMES */
+@keyframes drop{
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1024px){
+    .parent{
+        flex-direction: column-reverse;
+    }
+    .spaces{
+        width: 600px;
+        padding: 20px;
+    }
+    .space{
+        font-size: 30px;
+        padding: 10px;
+    }
+    .text_space{
+        padding-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .space{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    body{
+        background: #131f28;
+    }
+    .parent{
+        flex-direction: row;
+    }
+    .background{
+        display: none;
+    }
+    .homecard{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        text-align: center;
+    }
+    .spaces{
+        width: 100%;
+        margin-top: 100px;
+    }
+    .logomobile{
+        height: 100px;
+    }
+    .namemobile{
+        color: white;
+    }
+}
